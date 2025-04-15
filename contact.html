@@ -1,22 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Gaby</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <header>
+    <div class="logo">Gabriella Koba | Portofolio</div>
     <nav>
-        <a href="index.html">Home</a><br>
-        <a href="gallery.html">Gallery</a><br>
-        <a href="blog.html">Blog</a><br>
-        <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
-    <h1>Contact</h1>
-    <section>
-        <p>Ini adalah halaman kontak aku📲</p>
-        <p>Nomor Telepon : <a href="tel:0895806565939">0895806565939</a></p>
-        <p>Instagram : <a href="https://www.instagram.com/gabykoba_" target="_blank">@gabykoba_</a></p>
+  </header>
+
+  <main>
+    <section class="fade-in">
+      <h2>Hubungi Saya</h2>
+
+      <!-- Informasi Kontak -->
+      <div class="contact-boxes">
+        <div class="contact-info">
+          <p><strong>Email:</strong><br><a href="mailto:gabykoba655@gmail.com">gabykoba655@gmail.com</a></p>
+        </div>
+        <div class="contact-info">
+          <p><strong>Telepon:</strong><br><a href="tel:0895806565939">0895806565939</a></p>
+        </div>
+        <div class="contact-info">
+          <p><strong>Instagram:</strong><br><a href="https://instagram.com/gabykoba_" target="_blank">@gabykoba_</a></p>
+        </div>
+      </div>
+
+      <!-- Formulir Kontak -->
+      <form>
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan" rows="5" required></textarea>
+
+        <button type="submit">Kirim</button>
+      </form>
     </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gaby. All rights reserved.</p>
+  </footer>
 </body>
 </html>

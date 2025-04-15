@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Gaby</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <header>
+    <div class="logo">Gabriella Koba | Portofolio</div>
     <nav>
-        <a href="index.html">Home</a><br>
-        <a href="gallery.html">Gallery</a><br>
-        <a href="blog.html">Blog</a><br>
-        <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <h1>Photograph</h1>
-    <section>
-        <p>Ini adalah beberapa bagian dari hidupku dari masa ke masa📷❤️</p>
-        <img src="images/little.jpg" width="250">
-        <img src="images/gaby.jpg" width="188">
-        <img src="images/gebiii.jpg" width="200">
+  </header>
+
+  <main>
+    <section class="fade-in">
+      <h2>Photograph</h2>
+      <div class="grid">
+        <div class="card"><img src="images/gebiii.jpg" alt="Gambar 1" /></div>
+        <div class="card"><img src="images/little.jpg" alt="Gambar 2" /></div>
+        <div class="card"><img src="images/gaby.jpg" alt="Gambar 3" /></div>
+      </div>
     </section>
+  </main>
+
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Preview Gambar">
+    <button class="modal-close" aria-label="Tutup">×</button>
+    <img src="" alt="Preview Gambar">
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Gaby. All rights reserved.</p>
+  </footer>
 </body>
 </html>
