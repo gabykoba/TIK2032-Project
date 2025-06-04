@@ -3,30 +3,35 @@ window.addEventListener("load", () => {
     console.log("Website Gaby sudah dimuat 🚀");
   });
   
-  // Validasi form kontak
-  const form = document.querySelector("form");
-  if (form) {
-    form.addEventListener("submit", (e) => {
+// Validasi form kontak dan kirim ke server
+const form = document.querySelector("form");
+if (form) {
+  form.addEventListener("submit", (e) => {
+    const nama = document.getElementById("nama").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const pesan = document.getElementById("pesan").value.trim();
+
+    // Validasi input
+    if (!nama || !email || !pesan) {
+      e.preventDefault(); // Hanya cegah kirim jika tidak valid
+      alert("Semua field harus diisi ya 😅");
+      return;
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
       e.preventDefault();
-  
-      const nama = document.getElementById("nama").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const pesan = document.getElementById("pesan").value.trim();
-  
-      if (!nama || !email || !pesan) {
-        alert("Semua field harus diisi ya 😅");
-        return;
-      }
-  
-      console.log("Form dikirim ✅");
-      console.log(`Nama: ${nama}`);
-      console.log(`Email: ${email}`);
-      console.log(`Pesan: ${pesan}`);
-  
-      alert("Terima kasih sudah menghubungi! 🥰");
-      form.reset();
-    });
-  }
+      alert("Format email tidak valid 😅");
+      return;
+    }
+
+    // Jika valid, biarkan browser mengirim form ke guestbook_process.php
+    console.log("Form dikirim ✅");
+    console.log(`Nama: ${nama}`);
+    console.log(`Email: ${email}`);
+    console.log(`Pesan: ${pesan}`);
+  });
+}
+
   
   // Fade-in saat scroll
   const faders = document.querySelectorAll(".fade-in");
